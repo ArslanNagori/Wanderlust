@@ -32,7 +32,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    clone_code("https://github.com/LondheShubham153/Wanderlust-Mega-Project.git","main")
+                    clone_code("https://github.com/ArslanNagori/Wanderlust","main")
                 }
             }
         }
