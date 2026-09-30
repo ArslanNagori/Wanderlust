@@ -120,12 +120,11 @@ post{
     always{
         archiveArtifacts artifacts: '*.xml, trivy-fs-report.txt', allowEmptyArchive: true, followSymlinks: false
     }
-    // Enable once the Wanderlust-CD job exists:
-    // success{
-    //     build job: "Wanderlust-CD", wait: false, parameters: [
-    //         string(name: 'FRONTEND_DOCKER_TAG', value: "${params.FRONTEND_DOCKER_TAG}"),
-    //         string(name: 'BACKEND_DOCKER_TAG', value: "${params.BACKEND_DOCKER_TAG}")
-    //     ]
-    // }
+     success{
+         build job: "Wanderlust-CD", wait: false, parameters: [
+             string(name: 'FRONTEND_DOCKER_TAG', value: "${params.FRONTEND_DOCKER_TAG}"),
+             string(name: 'BACKEND_DOCKER_TAG', value: "${params.BACKEND_DOCKER_TAG}")
+         ]
+     }
 }
 }
