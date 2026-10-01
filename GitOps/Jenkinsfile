@@ -65,7 +65,7 @@ pipeline {
                         git add .
                         
                         echo "Commiting changes: "
-                        git commit -m "Updated environment variables"
+                        git commit -m "Update image tags in Kubernetes manifests"
                         
                         echo "Pushing changes to github: "
                         git push https://github.com/ArslanNagori/Wanderlust.git main
